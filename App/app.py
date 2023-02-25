@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-import joblib, numpy
+import joblib, numpy, json
 from pydantic import BaseModel, Field 
 from fastapi.encoders import jsonable_encoder
 import pandas as pd
