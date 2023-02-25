@@ -32,4 +32,4 @@ jobs:
     - name: Analysing the code with pytest and flake8
       run: |
         #flake8
-        #pytest -v
+        pytest -v
