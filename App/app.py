@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-import joblib, numpy, json
+import joblib
 from pydantic import BaseModel, Field 
 from fastapi.encoders import jsonable_encoder
 import pandas as pd
@@ -27,7 +27,6 @@ class Item(BaseModel):
 
     class Config:
         allow_population_by_field_name = True #Compensate for hyphens
-        #Extra
         schema_extra = {
                         "example": {
                                     'age':50,
@@ -65,46 +64,15 @@ async def predict_salary(sample: Item):
     Input a instance of raw data
     Return value is a salary prediction
     """
-    # Extra
-    data = {'age': sample.age,
-            'workclass': sample.workclass,
-            'fnlgt': sample.fnlgt,
-            'education': sample.education,
-            'education-num': sample.education_num,
-            'marital-status': sample.marital_status,
-            'occupation': sample.occupation,
-            'relationship': sample.relationship,
-            'race': sample.race,
-            'sex': sample.sex,
-            'capital-gain': sample.capital_gain,
-            'capital-loss': sample.capital_loss,
-            'hours-per-week': sample.hours_per_week,
-            'native-country': sample.native_country}
     if(not(sample)): 
         raise HTTPException(status_code=400, 
                             detail="Please Provide a valid sample")
     # jsonable_encoder converts BaseModel object to json
-    #label_dict = jsonable_encoder()
     sample = jsonable_encoder(sample)
     person = pd.DataFrame(sample, index=[0]) 
-    #person = pd.DataFrame(data, index=[0]) 
     person = process_data(person) # Format data for model
     prediction = cv_rfc.predict(person) # Predict on created df
     salary = {}
-    salary_cat = prediction.tolist()
+    salary_cat = prediction.tolist() # Prediction converted from np to list, expected less inputs error thrown otherwise
     salary['salary'] = salary_cat[0]
     return salary
-    """
-    pred = ''
-    if salary_cat[0] == 0:
-        pred = ">50k"
-        salary['salary'] = pred
-        salary = json.dumps(salary)
-        return salary
-    elif salary_cat[0] == 1:
-        pred = "<=50k"
-        salary['salary'] = pred
-        salary = json.dumps(salary)
-        return salary
-    """
-
