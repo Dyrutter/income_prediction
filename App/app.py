@@ -90,7 +90,8 @@ async def predict_salary(sample: Item):
     prediction = cv_rfc.predict(person) # Predict on created df
     salary = {}
     salary_cat = prediction.tolist()
-    return salary_cat
+    salary['salary'] = salary_cat[0]
+    return salary
     """
     pred = ''
     if salary_cat[0] == 0:
@@ -105,4 +106,3 @@ async def predict_salary(sample: Item):
         return salary
     """
 
-    return salary
