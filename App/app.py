@@ -90,12 +90,16 @@ async def predict_salary(sample: Item):
     prediction = cv_rfc.predict(person) # Predict on created df
     salary = {}
     salary_cat = prediction.tolist()
-
+    pred = ''
     if salary_cat[0] == 0:
-        prediction = ">50k"
+        pred = ">50k"
+        salary['salary'] = pred
+        salary = json.dumps(salary)
+        return salary
     elif salary_cat[0] == 1:
-        prediction = "<=50k"
-    salary['salary'] = prediction
-    salary = json.dumps(salary)
+        pred = "<=50k"
+        salary['salary'] = pred
+        salary = json.dumps(salary)
+        return salary
 
     return salary
