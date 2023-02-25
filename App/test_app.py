@@ -54,7 +54,7 @@ def test_over_50k():
 	r = client.post("/predict_salary", content=json.dumps(data)) #use content rather than data
 	#request = requests.post('http://127.0.0.1:8000/predict_salary', auth=('usr', 'pass'), data=json.dumps(data))
 	assert r.status_code == status.HTTP_200_OK #request.status_code == status.HTTP_200_OK
-	assert r.json() == {"salary": ">50k"} #request.json() == {"salary": ">50k"}
+	assert r.json() == {"salary": ">50K"} #request.json() == {"salary": ">50k"}
 	print(r.status_code)
 	print(r.json())
 
@@ -77,7 +77,7 @@ def test_under_50k():
 	r = client.post("/predict_salary", content=json.dumps(data))
 	#request = requests.post('http://127.0.0.1:8000/predict_salary', auth=('usr', 'pass'), data=json.dumps(data))
 	assert r.status_code == status.HTTP_200_OK
-	assert r.json() == {"salary": "<=50k"}
+	assert r.json() == {"salary": "<=50K"}
 	print(r.status_code)
 	print(r.json())
 
