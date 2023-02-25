@@ -88,7 +88,7 @@ async def predict_salary(sample: Item):
     sample = jsonable_encoder(sample)
     person = pd.DataFrame(sample, index=[0]) 
     #person = pd.DataFrame(data, index=[0]) 
-    #person = process_data(person) # Format data for model
+    person = process_data(person) # Format data for model
     prediction = cv_rfc.predict(person) # Predict on created df
     salary = {}
     salary_cat = prediction.tolist()
