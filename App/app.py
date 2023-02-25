@@ -86,19 +86,16 @@ async def predict_salary(sample: Item):
     # jsonable_encoder converts BaseModel object to json
     #label_dict = jsonable_encoder()
     person = pd.DataFrame(data, index=[0]) 
-    ##answer_dict = jsonable_encoder(sample)
-    ##salary = "" 
-
-    ##for key, value in answer_dict.items():
-    ##    answer_dict[key] = [value]
-    ##person = pd.DataFrame.from_dict(answer_dict) # Make df so prediction function works    
     person = process_data(person) # Format data for model
     prediction = cv_rfc.predict(person) # Predict on created df
     salary = {}
-    if(prediction[0] == 0):
-        prediction = [">50k"] 
+    salary_cat = prediction.tolist()
 
-    elif(prediction[0] == 1):
-        prediction = ["<=50k"] 
-    salary['salary'] = prediction    
+    if salary_cat[0] == 0:
+        prediction = ">50k"
+    elif salary_cat[0] == 1:
+        prediction = "<=50k"
+    salary['salary'] = prediction
+    salary = json.dumps(salary)
+
     return salary
