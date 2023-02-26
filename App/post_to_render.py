@@ -27,3 +27,5 @@ def get_salary():
         data=json.dumps(data))
     assert request.status_code == status.HTTP_200_OK
     assert request.json() == {"salary": ">50k"}
+    print (f"Input demographic sample is: {data}")
+    print (f"JSON salary prediction is: {request.json}")
