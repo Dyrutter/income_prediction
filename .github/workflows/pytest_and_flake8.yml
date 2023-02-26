@@ -31,5 +31,5 @@ jobs:
         pip install flake8
     - name: Analysing the code with pytest and flake8
       run: |
-        #flake8
-        #pytest -v
+        flake8
+        pytest -v
