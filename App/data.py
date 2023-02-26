@@ -20,8 +20,8 @@ logging.basicConfig(
     filemode='a',  # Create log file if it doesn't  exist & add to existing log
     format='%(asctime)s-%(name)s - %(levelname)s - %(message)s',
     # Format log string, basic_config only configures unconfigured root files
-    datefmt='%d %b %Y %H:%M:%S %Z')#,  # Format date
-    #force=True)
+    datefmt='%d %b %Y %H:%M:%S %Z',  # Format date
+    force=True)
 logger = logging.getLogger()
 base_url = "https://github.com/Dyrutter/"
 repo = "income_prediction/blob/main/data/data.csv?raw=True"
