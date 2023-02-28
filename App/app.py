@@ -28,6 +28,10 @@ class Item(BaseModel):
     native_country: object = Field(alias="native-country")
 
     class Config:
+        """
+        Compensate for hyphenated column names
+        Provide schema for inputs
+        """
         allow_population_by_field_name = True  # Compensate for hyphens
         schema_extra = {
             "example": {
