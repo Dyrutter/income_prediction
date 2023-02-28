@@ -20,12 +20,15 @@ def get_salary():
         "hours-per-week": 60,
         "native-country": "United-States"}
     request = requests.post(
-        'fastapi-app.onrender.com/predict_salary',
+        'https://salary-prediction-pnnc.onrender.com/predict_salary',
         auth=(
             'usr',
             'pass'),
         data=json.dumps(data))
     assert request.status_code == status.HTTP_200_OK
-    assert request.json() == {"salary": ">50k"}
+    assert request.json() == {"salary": ">50K"}
     print(f"Input demographic sample is: {data}")
-    print(f"JSON salary prediction is: {request.json}")
+    print(f"JSON salary prediction is: {request.json()}")
+
+
+get_salary()
