@@ -29,22 +29,22 @@ class Item(BaseModel):
 
     class Config:
         """
-        Compensate for hyphenated column names
-        Provide schema for inputs
+        Additional configurations for base model
+        Give scheme and compensate for hyphens in column names
         """
-        allow_population_by_field_name = True  # Compensate for hyphens
+        allow_population_by_field_name = True
         schema_extra = {
             "example": {
-                'age': 50,
+                'age': 35,
                 'workclass': "Private",
-                'fnlgt': 234721,
-                'education': "Doctorate",
-                'education_num': 16,
-                'marital_status': "Separated",
-                'occupation': "Exec-managerial",
+                'fnlgt': 287721,
+                'education': "10th",
+                'education_num': 10,
+                'marital_status': "Never-married",
+                'occupation': "Other-service",
                 'relationship': "Not-in-family",
-                'race': "Black",
-                'sex': "Female",
+                'race': "Other",
+                'sex': "Male",
                 'capital_gain': 0,
                 'capital_loss': 0,
                 'hours_per_week': 50,
