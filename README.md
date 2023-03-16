@@ -79,7 +79,7 @@ The project follows these steps:
 
 <img width="1397" alt="live_post" src="https://user-images.githubusercontent.com/126340978/225687088-79539dff-bfb9-42d8-b651-2a15f11ef003.png">
 
-# EXTRA RESOURCES
+# ADDITIONAL RESOURCES
 + [ml-ops.org](https://ml-ops.org/)
 + [5 Big Differences Separating API Testing From Unit Testing](https://methodpoet.com/api-testing-vs-unit-testing/)
 + [Why is it Important to Monitor Machine Learning Models?](https://mlinproduction.com/why-is-it-important-to-monitor-machine-learning-models/)
