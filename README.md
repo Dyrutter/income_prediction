@@ -33,3 +33,25 @@ The project follows these steps:
   + [Roc Plots](./data/figure_file/roc_curves.png)
   + [A Feature Importance Plot](./data/figure_file/feature_importances.png)
   + [A txt File Showing Performance Metrics on Specific Categorical Features](./data/slice_metrics.txt)
+
+## [app.py](./App/data.py)
++ Creates a base model class, using pydantic's Field to convert hyphenated column names to underscored column names
++ Configure the base model class with a schema example
++ Define a [GET] method at the root directory
++ Define a [POST] method which predicts the income category of an individual in the /predict_salary subdirectory
+
+## [test_app.py](./App/test_app.py)
++ Tests functions which download, preprocess, and split the data
++ Asserts the [GET] method is operational
++ Tests a prediction of salary >50k
++ Tests a prediction of salary <=50k
+
+## [post_to_render.py](./App/post_to_render.py)
++ Posts a single data sample to Render
++ Recieves an income prediction for the sample
++ Asserts the link is operational based on its status code
+
+## [sanity_check.py](./App/sanity_check.py)
++ Asserts files exist
++ Unit tests functions
++ Checks GET and POST status code
