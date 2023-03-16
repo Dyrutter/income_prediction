@@ -1,4 +1,5 @@
 # PROJECT OVERVIEW
+
 This is a demonstration of how to deploy a machine learning model using fast API. 
 
 The project follows these steps:
@@ -7,10 +8,11 @@ The project follows these steps:
 + Create unit tests to monitor the model's performance on various slices
 + Deploy the model using the FastAPI package and create API tests
 + Incorporate slice validation and API tests into a CI/CD framework using GitHub Actions
-+ Run flake8 and pytest on every GitHub push and pull
++ Run flake8 and pytest on every GitHub push and pull (See: [Continuous Integration](./data/figure_file/continuous_integration.png))
 + Upload model to Render for real-time analysis
 
 # ENVIRONMENT SETUP
+
 ## PREREQUISITES
 
 + Render account
@@ -55,3 +57,29 @@ The project follows these steps:
 + Asserts files exist
 + Unit tests functions
 + Checks GET and POST status code
+
+# EXAMPLE OUTPUT IMAGES
+## A Live Render POST Using CLI Command Prompt
+
+<img width="701" alt="live_script_post" src="https://user-images.githubusercontent.com/126340978/225682482-5df9cef8-476a-4830-bc77-35492bf11a2b.png">
+
+## A Live Render GET Using CLI Command Prompt
+
+<img width="446" alt="render_get" src="https://user-images.githubusercontent.com/126340978/225683240-82aecc81-3f90-4b63-ba91-7c1c7094ba5c.png">
+
+## A FastAPI POST Localhost Example
+
+<img width="1131" alt="Example" src="https://user-images.githubusercontent.com/126340978/225683975-4e18a1de-4cd1-421e-9f04-482abad4137d.png">
+
+## A Live Render Web Service Server
+
+<img width="787" alt="continuous_deployment2" src="https://user-images.githubusercontent.com/126340978/225684597-844c2f9e-8345-437e-a442-00ffddbfb106.png">
+
+## A Live Render Webpage Example
+
+<img width="1397" alt="live_post" src="https://user-images.githubusercontent.com/126340978/225687088-79539dff-bfb9-42d8-b651-2a15f11ef003.png">
+
+# EXTRA RESOURCES
++ [ml-ops.org](https://ml-ops.org/)
++ [5 Big Differences Separating API Testing From Unit Testing](https://methodpoet.com/api-testing-vs-unit-testing/)
++ [Why is it Important to Monitor Machine Learning Models?](https://mlinproduction.com/why-is-it-important-to-monitor-machine-learning-models/)
