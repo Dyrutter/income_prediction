@@ -63,19 +63,19 @@ The project follows these steps:
 
 <img width="701" alt="live_script_post" src="https://user-images.githubusercontent.com/126340978/225682482-5df9cef8-476a-4830-bc77-35492bf11a2b.png">
 
-## A Live Render GET Using CLI Command Prompt
+## Live Render GET Using CLI Command Prompt
 
 <img width="446" alt="render_get" src="https://user-images.githubusercontent.com/126340978/225683240-82aecc81-3f90-4b63-ba91-7c1c7094ba5c.png">
 
-## A FastAPI POST Localhost Example
+## FastAPI POST Localhost Example
 
 <img width="1131" alt="Example" src="https://user-images.githubusercontent.com/126340978/225683975-4e18a1de-4cd1-421e-9f04-482abad4137d.png">
 
-## A Live Render Web Service Server
+## Live Render Web Service Server
 
 <img width="787" alt="continuous_deployment2" src="https://user-images.githubusercontent.com/126340978/225684597-844c2f9e-8345-437e-a442-00ffddbfb106.png">
 
-## A Live Render Webpage Example
+## Live Render Webpage Example
 
 <img width="1397" alt="live_post" src="https://user-images.githubusercontent.com/126340978/225687088-79539dff-bfb9-42d8-b651-2a15f11ef003.png">
 
