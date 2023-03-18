@@ -83,3 +83,8 @@ The project follows these steps:
 + [ml-ops.org](https://ml-ops.org/)
 + [5 Big Differences Separating API Testing From Unit Testing](https://methodpoet.com/api-testing-vs-unit-testing/)
 + [Why is it Important to Monitor Machine Learning Models?](https://mlinproduction.com/why-is-it-important-to-monitor-machine-learning-models/)
+
+# SUGGESTIONS
++ Use codecov or equivalent to measure the test coverage (then write more tests and try to hit 100% coverage!).
++ Implement FastAPI’s advanced features such as authentication.
++ Create a front end for the API.
