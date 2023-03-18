@@ -83,6 +83,7 @@ The project follows these steps:
 + [ml-ops.org](https://ml-ops.org/)
 + [5 Big Differences Separating API Testing From Unit Testing](https://methodpoet.com/api-testing-vs-unit-testing/)
 + [Why is it Important to Monitor Machine Learning Models?](https://mlinproduction.com/why-is-it-important-to-monitor-machine-learning-models/)
++ [Feature Selection Using Scikit-learn](https://medium.com/analytics-vidhya/feature-selection-using-scikit-learn-5b4362e0c19b)
 
 # SUGGESTIONS
 + Use codecov or equivalent to measure the test coverage (then write more tests and try to hit 100% coverage!).
