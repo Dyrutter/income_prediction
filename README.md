@@ -9,7 +9,7 @@ The project follows these steps:
 + Deploy the model using the FastAPI package and create API tests
 + Incorporate slice validation and API tests into a CI/CD framework using GitHub Actions
 + Run flake8 and pytest on every GitHub push and pull (See: [Continuous Integration](./data/figure_file/continuous_integration.png))
-+ Upload model to Render for real-time analysis
++ Upload model to Render for real-time analysis through API
 
 # ENVIRONMENT SETUP
 
